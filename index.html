@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zostaniesz moją walentynką?</h1>
+        <div class="buttons">
+            <button id="yesButton">Tak</button>
+            <button id="noButton" onclick="runAway()">Nie</button>
+        </div>
+        <p id="response"></p>
+    </div>
+    
+    <script>
+        document.getElementById("yesButton").addEventListener("click", function() {
+            document.getElementById("response").innerText = "Jupiii!!! ❤❤";
+        });
+
+        function runAway() {
+            document.getElementById("noButton").style.position = "absolute";
+            document.getElementById("noButton").style.top = Math.random() * (window.innerHeight - 50) + "px";
+            document.getElementById("noButton").style.left = Math.random() * (window.innerWidth - 100) + "px";
+        }
+    </script>
+</body>
+</html>
